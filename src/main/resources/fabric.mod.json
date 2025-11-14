@@ -17,7 +17,6 @@
   "mixins": [
     "osc.mixins.json"
   ],
-  "accessWidener": "osc.accesswidener",
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric": "*",

@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.13-SNAPSHOT'
+    id 'fabric-loom' version '1.12-SNAPSHOT'
     id 'maven-publish'
 }
 
@@ -17,7 +17,6 @@ fabricApi {
     }
 }
 loom {
-    accessWidenerPath = file("src/main/resources/osc.accesswidener")
     runs {
         client {
             vmArgs("-XX:+IgnoreUnrecognizedVMOptions", "-XX:+AllowEnhancedClassRedefinition")
@@ -38,9 +37,9 @@ repositories {
 }
 
 dependencies {
-    implementation include("tools.jackson.core:jackson-core:3.0.2")
-    implementation include("tools.jackson.core:jackson-databind:3.0.2")
-    implementation include("tools.jackson.dataformat:jackson-dataformat-yaml:3.0.2")
+    modImplementation include("tools.jackson.core:jackson-core:3.0.2")
+    modImplementation include("tools.jackson.core:jackson-databind:3.0.2")
+    modImplementation include("tools.jackson.dataformat:jackson-dataformat-yaml:3.0.2")
     // To change the versions see the gradle.properties file
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
